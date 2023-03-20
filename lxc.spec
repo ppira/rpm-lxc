@@ -11,7 +11,7 @@
 
 Name:           lxc
 Version:        5.0.2
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Linux Resource Containers
 License:        LGPLv2+ and GPLv2
 URL:            https://linuxcontainers.org/lxc
@@ -38,8 +38,9 @@ BuildRequires:  pkgconfig(bash-completion)
 BuildRequires:  libcap-static
 BuildRequires:  glibc-static
 %endif
-# we are patching configure.ac
-BuildRequires:  autoconf automake libtool
+%if 0%{?with_liburing}
+BuildRequires:  liburing-devel
+%endif
 # lxc-extra subpackage not needed anymore, lxc-ls has been rewriten in
 # C and does not depend on the Python3 binding anymore
 Provides:       lxc-extra = %{version}-%{release}
@@ -126,7 +127,7 @@ This package contains static libraries for %{name}
 
 
 %build
-meson setup build/ --prefix=/usr
+meson setup build/ --prefix=/usr %{?with_liburing:-Dio-uring-event-loop=true}
 pushd doc/api
    doxygen
 popd
