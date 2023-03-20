@@ -20,6 +20,7 @@ curl https://raw.githubusercontent.com/ppira/rpm-lxc/main/lxc.spec -o $HOME/rpmb
 curl https://raw.githubusercontent.com/ppira/rpm-lxc/main/lxc-net -o $HOME/rpmbuild/SOURCES/lxc-net
 curl https://raw.githubusercontent.com/ppira/rpm-lxc/main/lxc-2.0.7-fix-init.patch -o $HOME/rpmbuild/SOURCES/lxc-2.0.7-fix-init.patch
 curl https://raw.githubusercontent.com/ppira/rpm-lxc/main/lxc-4.0.1-fix-lxc-net.patch -o $HOME/rpmbuild/SOURCES/lxc-4.0.1-fix-lxc-net.patch
+curl https://linuxcontainers.org/downloads/lxc/lxc-5.0.2.tar.gz -o $HOME/rpmbuild/SOURCES/lxc-5.0.2.tar.gz
 pushd $HOME/rpmbuild/SPECS/
   rpmbuild -bb lxc.spec
 popd
