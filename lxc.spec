@@ -32,6 +32,7 @@ BuildRequires:  pam-devel
 BuildRequires:  openssl-devel
 BuildRequires:  libtool
 BuildRequires:  systemd
+BuildRequires:  systemd-devel
 BuildRequires:  pkgconfig(bash-completion)
 %if 0%{?with_static_init}
 BuildRequires:  libcap-static
