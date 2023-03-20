@@ -2,13 +2,18 @@
 Build lxc rpms for EL9
 
 ## Install build tools
+As root:
 ```
 dnf --enablerepo=crb install ninja-build
 dnf install pip rpm-build rpmdevtools
+```
+As nonpirivileged user:
+```
 pip install meson  # meson shipped with EL9 is too old
 ```
 
 ## Build RPM
+As nonprivileged user:
 ```
 rpmdev-setuptree
 curl https://raw.githubusercontent.com/ppira/rpm-lxc/main/lxc.spec -o $HOME/rpmbuild/SPECS/lxc.spec
