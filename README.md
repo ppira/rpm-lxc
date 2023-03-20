@@ -7,7 +7,7 @@ As root:
 dnf --enablerepo=crb install ninja-build
 dnf install pip rpm-build rpmdevtools
 ```
-As nonpirivileged user:
+As nonprivileged user:
 ```
 pip install meson  # meson shipped with EL9 is too old
 ```
