@@ -25,3 +25,6 @@ pushd $HOME/rpmbuild/SPECS/
   rpmbuild -bb lxc.spec --define "with_liburing 1"
 popd
 ```
+## Binaries
+Available at:
+https://copr.fedorainfracloud.org/coprs/ppira/lxc/
