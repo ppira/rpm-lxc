@@ -19,6 +19,7 @@ Source0:        https://linuxcontainers.org/downloads/%{name}/%{name}-%{version}
 Source1:        lxc-net
 Patch0:         lxc-2.0.7-fix-init.patch
 Patch1:         lxc-4.0.1-fix-lxc-net.patch
+BuildRequires:  meson >= 0.61
 BuildRequires:  ninja-build
 BuildRequires:  docbook2X
 BuildRequires:  doxygen
