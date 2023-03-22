@@ -23,6 +23,7 @@ BuildRequires:  meson >= 0.61
 BuildRequires:  ninja-build
 BuildRequires:  docbook2X
 BuildRequires:  doxygen
+BuildRequires:  graphviz
 BuildRequires:  kernel-headers
 BuildRequires:  libselinux-devel
 %if 0%{?with_seccomp}
