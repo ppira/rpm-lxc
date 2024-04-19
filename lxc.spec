@@ -10,7 +10,7 @@
 %endif
 
 Name:           lxc
-Version:        5.0.3
+Version:        6.0.0
 Release:        2%{?dist}
 Summary:        Linux Resource Containers
 License:        LGPLv2+ and GPLv2
@@ -26,6 +26,7 @@ BuildRequires:  doxygen
 BuildRequires:  graphviz
 BuildRequires:  kernel-headers
 BuildRequires:  libselinux-devel
+BuildRequires:  dbus-devel
 %if 0%{?with_seccomp}
 BuildRequires:  pkgconfig(libseccomp)
 %endif
