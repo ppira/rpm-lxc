@@ -10,8 +10,8 @@
 %endif
 
 Name:           lxc
-Version:        6.0.0
-Release:        2%{?dist}
+Version:        6.0.2
+Release:        1%{?dist}
 Summary:        Linux Resource Containers
 License:        LGPLv2+ and GPLv2
 URL:            https://linuxcontainers.org/lxc
